@@ -1,0 +1,116 @@
+@import "nullstyle.scss";
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: rgba(128, 128, 128, 0.227);
+}
+.wrapper{
+    .blocks{
+        width: 100%;
+    }
+}
+.title{
+    padding: 30px 0 20px 0;
+    text-align: center;
+    h1{
+        font-size: 32px;
+        font-weight: 700;
+    }
+}
+.blocks{
+    display: flex;
+    .block{
+        border: 3px solid;
+        background-color: #D5E8D4;
+        .text{
+            font-size: 20px;
+            padding: 15px;
+        }
+    }
+}
+.caption{
+    text-align: right;
+    span{
+        font-size: 24px;
+        font-weight: 700;
+        border: 2px solid #000;
+        position: relative;
+        top: 6px;
+        left: 2px;
+        padding: 5px 20px;
+    }
+    margin: 0 0 20px 0;
+    &1{
+        background-color: #F0A30A;
+    }
+    &2{
+        color: #fff;
+        background-color: #D80073;
+    }
+    &3{
+        background-color: #FAD9D5;
+    }
+}
+.navigation{
+    text-align: center;
+    a{
+        display: inline-block;
+        border: 1px solid #000;
+        margin: 0 50px;
+        width: 100px;
+        height: 30px;
+        background-color: #4D5656;
+        span{
+            position: relative;
+            top: 8px;
+            color: #fff;
+        }
+    }
+}
+
+@media (min-width: 993px){
+     .wrapper{
+        .blocks{
+            margin: 0 0 10% 1%;
+            .block{
+                flex: 1 0 20%;
+                margin: 0 2% 0 0;
+                &:last-child{
+                    margin: 0 2% 0 0;
+                }
+            }
+        }
+     }
+}
+
+@media (min-width: 769px) and (max-width: 992px){
+    .wrapper{
+        .blocks{
+            flex-wrap: wrap;
+            margin: 0 0 10% 0;
+            .block1{
+                flex: 1 0 45%;
+                margin: 0 3% 0 3%;
+            }
+            .block2{
+                flex: 1 0 45%;
+                margin: 0 3% 0 0;
+            }
+            .block3{
+                margin: 3% 3% 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .wrapper{
+        .blocks{
+            flex-wrap: wrap;
+            margin: 0 0 5% 0;
+            .block{
+                flex: 1 0 90%;
+                margin: 0 3% 3%;
+            }
+        }
+    }
+}
